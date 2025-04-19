@@ -5,7 +5,7 @@ from agents import Agent, RunConfig, Runner
 
 from openai.types.responses import ResponseTextDeltaEvent
 
-from agent import create_whatsapp_agent, get_model_config
+from agent import WhatsAppAgent
 from config import settings
 
 @cl.on_chat_start 
@@ -25,8 +25,11 @@ async def on_chat_start():
         cl.Message(content=f"Failed to start MCP Server: {e}").send()
         return
 
-    agent = create_whatsapp_agent(server)
-    config = get_model_config()
+    # Create the agent and config
+    wa_agent = WhatsAppAgent()
+
+    agent = wa_agent.create_whatsapp_agent(server)
+    config = wa_agent.get_model_config()
 
     # Store the initialized components in the user session
     cl.user_session.set("agent", agent) 
