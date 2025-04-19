@@ -74,3 +74,13 @@ Run the Chainlit app:
 uv run chainlit run chainlit_app.py -w
 ```
 The application will be running at `http://localhost:8000`
+
+### Example Questions
+Here are some example questions you can ask the WhatsApp Agent:
+
+- Show me my recent chats.
+- Send a message to John Doe: "Meeting at 5pm."
+- List all messages from John in the last week.
+- Download the last photo sent in the SF News group.
+- Search for contacts named Alex.
+- Get the last interaction with +1234567890.
