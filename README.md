@@ -1,8 +1,10 @@
 # WhatsApp Agent
 
-A Chainlit Agent that interacts with WhatsApp using WhatsApp MCP server.
+An Agent that interacts with WhatsApp using WhatsApp MCP server. It can perform multiple actions on the user's behalf.
 
-# Features
+![WhatsApp Agent](agent.png)
+
+# 🚀 Features
 The Agent is connected to WhatsApp MCP server. This server provides the following tools:
 
 - **search_contacts:** Search for contacts by name or phone number
@@ -18,7 +20,7 @@ The Agent is connected to WhatsApp MCP server. This server provides the followin
 - **send_audio_message:** Send an audio file as a WhatsApp voice message (requires the file to be an .ogg opus file or ffmpeg must be installed)
 - **download_media:** Download media from a WhatsApp message and get the local file path
 
-# Setup
+# ⚡Quick Start
 ## Prerequisites
 
 *   Python 3.10+
@@ -31,28 +33,34 @@ The Agent is connected to WhatsApp MCP server. This server provides the followin
 
 ## Installation
 
-1.  Clone the repository:
+Follow these steps to set up the project on your local machine:
+
+1. **Clone the repository**
 
     ```bash
     git clone https://github.com/aasherkamal216/whatsapp_agent.git
     cd whatsapp_agent
     ```
 
-2.  Create a virtual environment:
+2. **Create and activate a virtual environment**
 
     ```bash
     uv venv
-    source .venv/bin/activate # On Mac
-    .venv\Scripts\activate # On Windows
+    # On macOS/Linux
+    source .venv/bin/activate
+    # On Windows
+    .venv\Scripts\activate
     ```
 
-3.  Install dependencies using uv:
+3. **Install dependencies**
 
     ```bash
     uv sync
     ```
 
-4.  Copy the `.env.example` file to `.env`:
+4. **Set up environment variables**
+
+    Copy the example environment file and update it with your credentials:
 
     ```bash
     cp .env.example .env
@@ -62,7 +70,7 @@ The Agent is connected to WhatsApp MCP server. This server provides the followin
 ## Usage
 
 Run the Chainlit app:
-
 ```bash
-    chainlit run chainlit_app.py -w
+uv run chainlit run chainlit_app.py -w
 ```
+The application will be running at `http://localhost:8000`
