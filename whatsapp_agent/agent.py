@@ -6,7 +6,8 @@ from agents import (
     RunConfig,
 )
 from agents.mcp import MCPServer
-from config import settings
+
+from .config import settings
 
 class WhatsAppAgent:
     def __init__(self):

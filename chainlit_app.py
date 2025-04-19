@@ -5,8 +5,8 @@ from agents import Agent, RunConfig, Runner
 
 from openai.types.responses import ResponseTextDeltaEvent
 
-from agent import WhatsAppAgent
-from config import settings
+from whatsapp_agent.agent import WhatsAppAgent
+from whatsapp_agent.config import settings
 
 @cl.on_chat_start 
 async def on_chat_start():
